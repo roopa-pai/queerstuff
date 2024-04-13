@@ -1,5 +1,3 @@
 # Search - placeholder page
 
-To be created later.
-
-<! -- your comment [Search](api call) -->
+[Search](https://roopa-pai.github.io/queerstuff/api/events)
