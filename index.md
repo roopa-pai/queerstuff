@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This website is meant to help queer folx find queer events more easily. We hope this helps people in the queer community avoidfeelings of isolationby helping them find events easily,  and form a networkand and get a feeling of community 
+This website is meant to help queer folx find queer events more easily. We hope this helps tackle feelings of isolation in the queer community by helping them find events easily, form networks, and get a feeling of community 
 
 ## Current included organizations' events pages we're using include:
 [BiBerlin](https://biberlin.de/events/), [SonntagsClub](https://sonntags-club.de/programm/programm_aktuell.php) & [SchwuZ](https://www.schwuz.de/events/).
