@@ -1,2 +1,2 @@
-# miniature-robot
+# queerstuff
 UITHACK2024 project
