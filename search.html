@@ -39,6 +39,58 @@
             background-color: #0056b3;
         }
     </style>
+    <script>
+        // Function to fetch events from the local JSON file
+        function fetchEvents() {
+            fetch('events.json')
+            .then(response => response.json())
+            .then(events => displayEvents(events))
+            .catch(error => console.error('Error fetching events:', error));
+        }
+    
+        // Function to display events as a list
+        function displayEvents(events) {
+            var eventList = document.getElementById("event-list");
+            eventList.innerHTML = ''; // Clear the existing list
+    
+            events.forEach(function(event) {
+                var listItem = document.createElement("li");
+                var image = document.createElement("img");
+                image.src = event.image_url;
+                image.alt = event.title;
+                listItem.appendChild(image);
+    
+                var title = document.createElement("h2");
+                title.textContent = event.title;
+                listItem.appendChild(title);
+    
+                var date = document.createElement("p");
+                date.textContent = "Date: " + event.date;
+                listItem.appendChild(date);
+    
+                var location = document.createElement("p");
+                location.textContent = "Location: " + event.location;
+                listItem.appendChild(location);
+    
+                var description = document.createElement("p");
+                description.textContent = "Description: " + event.description;
+                listItem.appendChild(description);
+    
+                var url = document.createElement("a");
+                url.href = event.url;
+                url.textContent = "More Info";
+                listItem.appendChild(url);
+    
+                eventList.appendChild(listItem);
+            });
+        }
+    
+        // Add event listener to the search button
+        document.getElementById("search-button").addEventListener("click", function() {
+            fetchEvents();
+        });
+    </script>
+    
 </head>
 <body>
     <div class="container">
@@ -48,8 +100,9 @@
             <p>Use the links on the left to filter results by category.</p>
         </div>
         <div id="search-button">
-            <a class="search-button" href="https://roopa-pai.github.io/queerstuff/api/events">Search</a>
+            <button class="search-button">Search</button>
         </div>
+        
     </div>
 </body>
 </html>
