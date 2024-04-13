@@ -8,7 +8,7 @@ Use the links on the left to filter by category.
 
 
 ## Current included organizations' events pages we're using include:
-[BiBerlin](https://biberlin.de/events/) & [SonntagsClub](https://sonntags-club.de/programm/programm_aktuell.php)
+[BiBerlin](https://biberlin.de/events/), [SonntagsClub](https://sonntags-club.de/programm/programm_aktuell.php) & [SchwuZ](https://www.schwuz.de/events/).
 
 # Search
 
