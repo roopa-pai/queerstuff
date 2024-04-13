@@ -1,3 +1,3 @@
-# Search (placeholder page)
+# Search - placeholder page
 
 To be created later.
