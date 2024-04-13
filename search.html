@@ -4,6 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event List</title>
+    <style>
+        /* CSS styles for the event cards */
+        .event-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+        }
+
+        .event-image {
+            width: 150px;
+            height: 150px;
+            margin-right: 16px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .event-details {
+            flex-grow: 1;
+        }
+
+        .event-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .event-date,
+        .event-location,
+        .event-description {
+            margin-bottom: 4px;
+        }
+
+        .event-url {
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <h1>Event List</h1>
@@ -13,56 +53,65 @@
     <ul id="event-list"></ul>
 
     <script>
-        console.log('HI');
         // Function to fetch events from the local JSON file
         function fetchEvents() {
-            fetch('example_results.json')
+            fetch('search_results.json')
             .then(response => response.json())
             .then(events => displayEvents(events))
             .catch(error => console.error('Error fetching events:', error));
         }
 
-        // Function to display events as a list
+        // Function to display events as a list of cards
         function displayEvents(events) {
             var eventList = document.getElementById("event-list");
             eventList.innerHTML = ''; // Clear the existing list
 
             events.forEach(function(event) {
                 var listItem = document.createElement("li");
+                listItem.classList.add("event-card");
+
                 var image = document.createElement("img");
+                image.classList.add("event-image");
                 image.src = event.image_url;
                 image.alt = event.title;
                 listItem.appendChild(image);
 
+                var eventDetails = document.createElement("div");
+                eventDetails.classList.add("event-details");
+
                 var title = document.createElement("h2");
+                title.classList.add("event-title");
                 title.textContent = event.title;
-                listItem.appendChild(title);
+                eventDetails.appendChild(title);
 
                 var date = document.createElement("p");
+                date.classList.add("event-date");
                 date.textContent = "Date: " + event.date;
-                listItem.appendChild(date);
+                eventDetails.appendChild(date);
 
                 var location = document.createElement("p");
+                location.classList.add("event-location");
                 location.textContent = "Location: " + event.location;
-                listItem.appendChild(location);
+                eventDetails.appendChild(location);
 
                 var description = document.createElement("p");
+                description.classList.add("event-description");
                 description.textContent = "Description: " + event.description;
-                listItem.appendChild(description);
+                eventDetails.appendChild(description);
 
                 var url = document.createElement("a");
+                url.classList.add("event-url");
                 url.href = event.url;
                 url.textContent = "More Info";
-                listItem.appendChild(url);
+                eventDetails.appendChild(url);
 
+                listItem.appendChild(eventDetails);
                 eventList.appendChild(listItem);
             });
         }
 
         // Add event listener to the search button after DOM is loaded
         document.addEventListener("DOMContentLoaded", function() {
-
-        console.log('loaded');
             document.getElementById("search-button").addEventListener("click", function() {
                 fetchEvents();
             });
