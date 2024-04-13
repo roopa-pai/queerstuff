@@ -4,16 +4,12 @@
 
 This website is meant to help queer folx find queer events more easily. We hope this helps people in the queer community avoidfeelings of isolationby helping them find events easily,  and form a networkand and get a feeling of community 
 
-Use the links on the left to filter by category.
-
-
 ## Current included organizations' events pages we're using include:
 [BiBerlin](https://biberlin.de/events/), [SonntagsClub](https://sonntags-club.de/programm/programm_aktuell.php) & [SchwuZ](https://www.schwuz.de/events/).
 
-# Search
+## Search Page
 
-[Search](https://roopa-pai.github.io/queerstuff/pages/search.md)
-
+[Search Page](https://roopa-pai.github.io/queerstuff/pages/search.md)
 
 
 <img src="https://roopa-pai.github.io/queerstuff/imgs/UITHACK24_pinklogo.png" alt="UITHACK24 logo" style="height: 150px; width:500px;"/>
