@@ -1,6 +1,6 @@
 # queerstuff
 UITHACK2024 project
 
-[Introduction](../docs/index.md)
+[Introduction](https://roopa-pai.github.io/queerstuff/docs/index.md)
 
 
