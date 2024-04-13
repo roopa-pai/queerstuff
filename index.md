@@ -16,4 +16,4 @@ Use the links on the left to filter by category.
 
 
 
-<img src="https://roopa-pai.github.io/queerstuff/imgs/UITHACK24_Logo.png" alt="UITHACK24 logo" style="height: 50px; width:100px;"/>
+<img src="https://roopa-pai.github.io/queerstuff/imgs/UITHACK24_Logo.png" alt="UITHACK24 logo" style="height: 100px; width:500px;"/>
