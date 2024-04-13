@@ -55,7 +55,7 @@
     <script>
         // Function to fetch events from the local JSON file
         function fetchEvents() {
-            fetch('search_results.json')
+            fetch('example_results.json')
             .then(response => response.json())
             .then(events => displayEvents(events))
             .catch(error => console.error('Error fetching events:', error));
@@ -85,17 +85,14 @@
                 eventDetails.appendChild(title);
 
                 var date = document.createElement("p");
-                date.classList.add("event-date");
                 date.textContent = "Date: " + event.date;
                 eventDetails.appendChild(date);
 
                 var location = document.createElement("p");
-                location.classList.add("event-location");
                 location.textContent = "Location: " + event.location;
                 eventDetails.appendChild(location);
 
                 var description = document.createElement("p");
-                description.classList.add("event-description");
                 description.textContent = "Description: " + event.description;
                 eventDetails.appendChild(description);
 
