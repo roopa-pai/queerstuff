@@ -13,3 +13,7 @@ Use the links on the left to filter by category.
 # Search
 
 [Search](https://roopa-pai.github.io/queerstuff/pages/search.md)
+
+
+
+<img src="https://roopa-pai.github.io/queerstuff/imgs/UITHACK24_Logo.png" alt="UITHACK24 logo" style="height: 50px; width:100px;"/>
