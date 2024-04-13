@@ -9,7 +9,7 @@ This website is meant to help queer folx find queer events more easily. We hope 
 
 ## Search Page
 
-[Search Page](https://roopa-pai.github.io/queerstuff/search.md)
+[Search Page](search.md)
 
 
 <img src="https://roopa-pai.github.io/queerstuff/imgs/UITHACK24_pinklogo.png" alt="UITHACK24 logo" style="height: 150px; width:500px;"/>
