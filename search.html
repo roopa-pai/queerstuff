@@ -13,9 +13,10 @@
     <ul id="event-list"></ul>
 
     <script>
+        console.log('HI');
         // Function to fetch events from the local JSON file
         function fetchEvents() {
-            fetch('events.json')
+            fetch('example_results.json')
             .then(response => response.json())
             .then(events => displayEvents(events))
             .catch(error => console.error('Error fetching events:', error));
@@ -60,6 +61,8 @@
 
         // Add event listener to the search button after DOM is loaded
         document.addEventListener("DOMContentLoaded", function() {
+
+        console.log('loaded');
             document.getElementById("search-button").addEventListener("click", function() {
                 fetchEvents();
             });
