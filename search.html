@@ -3,57 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Page</title>
-    <style>
-        /* Add your custom CSS styles here */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-        .search-button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-        .search-button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-
-    
+    <title>Event List</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Search Page</h1>
-        <div id="instructions">
-            <h2>Instructions</h2>
-            <p>Use the links on the left to filter results by category.</p>
-        </div>
-        <div id="search-button">
-            <button class="search-button">Search</button>
-        </div>
-        
+    <h1>Event List</h1>
+    <div id="search-button">
+        <button class="search-button">Search</button>
     </div>
+    <ul id="event-list"></ul>
+
     <script>
         // Function to fetch events from the local JSON file
         function fetchEvents() {
@@ -62,47 +20,49 @@
             .then(events => displayEvents(events))
             .catch(error => console.error('Error fetching events:', error));
         }
-    
+
         // Function to display events as a list
         function displayEvents(events) {
             var eventList = document.getElementById("event-list");
             eventList.innerHTML = ''; // Clear the existing list
-    
+
             events.forEach(function(event) {
                 var listItem = document.createElement("li");
                 var image = document.createElement("img");
                 image.src = event.image_url;
                 image.alt = event.title;
                 listItem.appendChild(image);
-    
+
                 var title = document.createElement("h2");
                 title.textContent = event.title;
                 listItem.appendChild(title);
-    
+
                 var date = document.createElement("p");
                 date.textContent = "Date: " + event.date;
                 listItem.appendChild(date);
-    
+
                 var location = document.createElement("p");
                 location.textContent = "Location: " + event.location;
                 listItem.appendChild(location);
-    
+
                 var description = document.createElement("p");
                 description.textContent = "Description: " + event.description;
                 listItem.appendChild(description);
-    
+
                 var url = document.createElement("a");
                 url.href = event.url;
                 url.textContent = "More Info";
                 listItem.appendChild(url);
-    
+
                 eventList.appendChild(listItem);
             });
         }
-    
-        // Add event listener to the search button
-        document.getElementById("search-button").addEventListener("click", function() {
-            fetchEvents();
+
+        // Add event listener to the search button after DOM is loaded
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("search-button").addEventListener("click", function() {
+                fetchEvents();
+            });
         });
     </script>
 </body>
