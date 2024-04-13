@@ -12,4 +12,4 @@ Use the links on the left to filter by category.
 
 # Search
 
-[Search](https://roopa-pai.github.io/queerstuff/search.md)
+[Search](https://roopa-pai.github.io/queerstuff/pages/search.md)
